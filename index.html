@@ -1,0 +1,332 @@
+<html>
+<head>
+<style>
+    body {
+        font-family: sans-serif;
+        margin-top: 100px;
+        padding: 8px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    h4 {
+        margin-bottom: 40px;
+        color: grey;
+    }
+    .ea-row {
+        box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+        background: white;
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+    }
+
+    .ea-entity-holder {
+        padding: 20px;
+        width: 140px;
+        font-weight: bold;
+        padding-bottom: 22px;
+    }
+
+    .ea-icon-holder {
+        padding: 20px 30px;
+        color: lightgrey;
+        transition: 0.12s linear;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        height: 20px;
+    }
+
+        .ea-icon-holder:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+    .ea-role-holder {
+        display: flex;
+        flex: 1;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding: 20px;
+    }
+
+    .ea-badge {
+        color: white;
+        padding:4px 12px;
+        border-radius: 99px;
+        margin-right: 8px;
+        font-size: 12px;
+        display: flex;
+        flex: 0 0 auto;
+        line-height: 12px;
+        cursor: pointer;
+    }
+
+    .purple {
+        background: purple;
+    }
+
+     .grey {
+        background: grey;
+    }
+
+
+    .ea2-column {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .cap {
+        border-left: 4px solid purple;
+    }
+
+    .disabled {
+        border-left: 4px solid lightgrey;
+        color: grey;
+    }
+
+    .partial {
+        border-left: 4px solid orange;
+        color: grey;
+    }
+    .ea2-role-holder {
+        display: flex;
+        padding: 20px;
+        height: 20px;
+    }
+
+    .divider {
+        border-bottom: 0.5px solid rgba(0,0,0,0.12);
+        width: 100%;
+    }
+    .scroll {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;  
+    }
+
+    .stack {
+        margin-bottom: 4px;
+    
+    }
+
+     .scroll::-webkit-scrollbar {
+         display: none;
+    }
+
+    @media all and (max-width: 680px) {
+        .scroll {
+            box-shadow: inset 2px 0px 1px rgba(0,0,0,0.12), inset -2px 0px 1px rgba(0,0,0,0.12);
+
+        }
+
+        body {
+            padding: 0px;
+        }
+
+        .ea2-column {
+            flex-shrink: 1;
+        }
+
+         .ea-icon-holder {
+        padding: 20px 8px;
+    }
+    .ea-entity-holder {
+        padding: 20px 8px;
+        width: 100px;
+        font-weight: bold;
+        font-size: 12px;
+        height: 20px;
+        flex-shrink: 1;    
+    }
+    .ea-badge {
+        padding: 4px 8px;
+        color: white;
+        font-size: 10px;
+        line-height: auto;
+    }
+
+    .ea-role-holder {
+        padding: 20px 8px;
+    }
+    .ea2-role-holder {
+        padding: 20px 8px;
+    }
+    }
+
+</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+</head>
+<body>
+    <div>
+    <h4> Version 1 - Individual scroll </h4>
+
+    <div class="ea-row disabled">
+            <div class="ea-entity-holder"><i class="fas fa-briefcase"></i> Workstream 1</div> 
+             <div class="ea-role-holder scroll">
+             </div>
+             <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+         </div>
+
+    <div class="ea-row cap">
+       <div class="ea-entity-holder"><i class="fas fa-briefcase"></i> Workstream 2</div> 
+        <div class="ea-role-holder scroll">
+            <div class="ea-badge purple"><i class="fas fa-users"></i> Project Member - HR</div>
+            <div class="ea-badge purple">Workstream Member</div>
+            <div style="padding-right:40px;"></div>
+        </div>
+        <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+    </div>
+
+    <div class="ea-row cap">
+            <div class="ea-entity-holder"><span style="margin-right:8px;"></span><i class="fas fa-folder"></i> Project 1</div> 
+             <div class="ea-role-holder scroll">
+                 <div class="ea-badge grey"><i class="fas fa-users"></i> Project Member - HR</div>
+                 <div class="ea-badge grey">Workstream Member</div>
+                 <div class="ea-badge purple">Basic Access</div>
+                 <div style="padding-right:40px;"></div>
+             </div>
+             <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+    </div>
+
+    <div class="ea-row cap">
+            <div class="ea-entity-holder"><span style="margin-right:8px;"></span><i class="fas fa-folder"></i> Project 2</div> 
+             <div class="ea-role-holder scroll">
+                 <div class="ea-badge grey"><i class="fas fa-users"></i> Project Member - HR</div>
+                 <div class="ea-badge grey">Workstream Member</div>
+                 <div style="padding-right:40px;"></div>
+             </div>
+             <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+    </div>
+
+    <div class="ea-row partial">
+            <div class="ea-entity-holder"><i class="fas fa-briefcase"></i> Workstream 3</div> 
+             <div class="ea-role-holder scroll">
+             </div>
+             <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+         </div>
+
+
+</div>
+
+<div style="margin-top: 80px;">
+        <h4> Version 2 - Full scroll</h4>
+    
+    <div class="ea2-container" style="display:flex;margin: auto; max-width: 1000px; box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    ">
+        <div class="ea2-column">
+                <div class="ea-entity-holder disabled"><i class="fas fa-briefcase"></i> Workstream 1</div> 
+           <div class="divider"></div> 
+           <div class="ea-entity-holder cap"><i class="fas fa-briefcase"></i> Workstream 2</div> 
+           <div class="divider"></div>
+           <div class="ea-entity-holder cap"><i class="fas fa-folder"></i> Project 1</div> 
+           <div class="divider"></div>
+           <div class="ea-entity-holder cap"><i class="fas fa-folder"></i> Project 2</div> 
+           <div class="divider"></div>
+           <div class="ea-entity-holder partial"><i class="fas fa-briefcase"></i> Workstream 3</div> 
+         </div>
+
+         <div class="ea2-column scroll" style="flex: 1;">
+                <div class="ea2-role-holder">
+                    </div>
+                    <div class="divider"></div>
+                <div class="ea2-role-holder">
+                        <div class="ea-badge purple"><i class="fas fa-users"></i> Project Member - HR</div>
+                        <div class="ea-badge purple">Workstream Member</div>
+                        <div style="padding-right:40px;"></div>
+                    </div>
+                    <div class="divider"></div>
+                <div class="ea2-role-holder">
+                        <div class="ea-badge grey"><i class="fas fa-users"></i> Project Member - HR</div>
+                        <div class="ea-badge grey">Workstream Member</div>
+                        <div class="ea-badge purple">Basic Access</div>
+                        <div style="padding-right:40px;"></div>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="ea2-role-holder">
+                            <div class="ea-badge grey"><i class="fas fa-users"></i> Project Member - HR</div>
+                            <div class="ea-badge grey">Workstream Member</div>
+                            <div style="padding-right:40px;"></div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="ea2-role-holder">
+                                <div class="ea-badge grey" style="opacity:0; pointer-events:none;padding-bottom:6px;">none</div>
+
+                            </div>
+              </div>
+
+              <div class="ea2-column">
+                    <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>    
+                    <div class="divider"></div>
+                    <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+                    <div class="divider"></div>
+                    <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+                    <div class="divider"></div>
+                    <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+                    <div class="divider"></div>
+                    <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+                  </div>
+    </div>
+
+    <div style="margin-top: 80px;">
+            <h4> Version 3 - Stack</h4>
+
+            <div class="ea-row disabled">
+                    <div class="ea-entity-holder"><i class="fas fa-briefcase"></i> Workstream 1</div> 
+                     <div class="ea-role-holder"style="flex-wrap: wrap;" >
+                    </div>
+                     <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+                 </div>
+        
+            <div class="ea-row cap">
+               <div class="ea-entity-holder"><i class="fas fa-briefcase"></i> Workstream 2</div> 
+                <div class="ea-role-holder"style="flex-wrap: wrap;" >
+                    <div class="ea-badge purple stack"><i class="fas fa-users"></i> Project Member - HR</div>
+                    <div class="ea-badge purple stack">
+                            Workstream Member</div>
+                    <div style="padding-right:40px;"></div>
+                </div>
+                <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+            </div>
+        
+            <div class="ea-row cap">
+                    <div class="ea-entity-holder"><span style="margin-right:8px;"></span><i class="fas fa-folder"></i> Project 1</div> 
+                     <div class="ea-role-holder " style="flex-wrap: wrap;">
+                         <div class="ea-badge grey stack"><i class="fas fa-users"></i> Project Member - HR</div>
+                         <div class="ea-badge grey stack">Workstream Member</div>
+                         <div class="ea-badge purple stack">Basic Access</div>
+                         <div style="padding-right:40px;"></div>
+                     </div>
+                     <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+            </div>
+
+            <div class="ea-row cap">
+                    <div class="ea-entity-holder"><span style="margin-right:8px;"></span><i class="fas fa-folder"></i> Project 2</div> 
+                     <div class="ea-role-holder " style="flex-wrap: wrap;">
+                         <div class="ea-badge grey stack"><i class="fas fa-users"></i> Project Member - HR</div>
+                         <div class="ea-badge grey stack">Workstream Member</div>
+                         <div style="padding-right:40px;"></div>
+                     </div>
+                     <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+            </div>
+
+            <div class="ea-row partial">
+                    <div class="ea-entity-holder"><i class="fas fa-briefcase"></i> Workstream 3</div> 
+                    <div class="ea-role-holder " style="flex-wrap: wrap;">
+                       
+                     </div>
+                     <div class="ea-icon-holder"><i class="fas fa-ellipsis-v"></i></div>
+            </div>
+
+
+        </div>
+        
+        <div>
+
+</body>
+</html>
